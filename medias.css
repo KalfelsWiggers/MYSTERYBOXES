@@ -1,0 +1,31 @@
+@media screen and (max-width: 950px) {
+    header{
+        grid-template-columns: 3fr 2fr 1fr;
+    }
+    aside{
+        width: 100%;
+    }
+    article{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    header{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        height: 75dvh;
+    }
+    .icons{
+        border-top-left-radius: 0;
+    }
+    .account{
+        border-top-right-radius: 0;
+    }
+}

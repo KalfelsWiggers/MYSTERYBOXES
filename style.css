@@ -1,0 +1,292 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-bg: rgb(20, 20, 20);
+    --clr-grad-1: rgb(47, 30, 196);
+    --clr-grad-2: rgb(219, 37, 67);
+    --clr-grad-3: rgb(108, 23, 206);
+    --clr-font: white;
+    --background: linear-gradient(90deg, var(--clr-grad-1), var(--clr-grad-2), var(--clr-grad-3)) no-repeat; background-size: cover;
+}
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background: var(--background);
+    color: var(--clr-font);
+    margin: .2rem;
+    font-family: 'Poppins'; font-size: 1em;
+    overflow: hidden;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    column-gap: .2rem;
+}
+.box{
+    background-color: var(--clr-bg); 
+}
+.name{
+    font-size: 2em;
+    font-weight: 700;
+    padding: 0 .5rem;
+    float: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+}
+.name span{
+    pointer-events: none;
+    font-size: 1.1em;
+    background: var(--background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icons{
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: .6rem;
+}
+.icon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--clr-font);
+    transition: color .2s ease-in-out;
+}
+.icon a:hover{
+    color: var(--clr-grad-3);
+}
+.icon a #linkIcon{
+    display: none;
+}
+.icon a:hover > #linkIcon{
+    display: block;
+    animation: up .3s ease-in-out forwards;
+}
+@keyframes up {
+    0%{transform: translateY(5px); opacity: .4;}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+
+.account{
+    border-top-right-radius: .6rem;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account a{
+    text-decoration: none;
+    color: var(--clr-font);
+    transition: all .2s ease-in-out;
+}
+.account a:hover{
+    color: var(--clr-grad-3);
+}
+
+#popUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: .6rem;
+    padding: 0;
+    display: none;
+    z-index: 1;
+    animation: none;
+}
+@keyframes popFade {
+    0%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+#popUpContent{
+    position: relative;
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-bg);
+}
+#popUpContent::before, #popUpContent::after{
+    content: "";
+    position: absolute;
+    inset: -.2rem;
+    background: var(--background);
+    border-radius: inherit;
+    z-index: -1;
+}
+#popUpContent::after{
+    filter: blur(3.5rem);
+}
+#popUpContent h1{
+    pointer-events: none;
+    font-size: 2rem;
+    background: linear-gradient(90deg, var(--clr-grad-1), var(--clr-grad-2)) no-repeat; background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#popUpContent span{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+}
+#popUpContent p{
+    font-size: 1em;
+}
+.contatos{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+  
+
+/*HEADER*/
+
+/*MAIN*/
+
+main{
+    width: 100%;
+    height: 90dvh;
+    display: grid;
+    grid-template-columns: 7fr;
+    gap: .2rem;
+    margin-top: .2rem;
+}
+.main-content{
+    background-color: var(--clr-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-left-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+aside{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+aside h2{
+    font-size: 2em;
+    font-weight: 700;
+    opacity: .9;
+}
+aside h1{
+    pointer-events: none;
+    font-size: 2.1em;
+    background: var(--background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+aside p{
+    line-height: 2rem;
+    font-size: 1.1em;
+}
+aside form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+aside form input{
+    height: 1.5rem;
+    background-color: white;
+    border: none;
+    border-radius: .2rem;
+    padding: 0 .5rem;
+}
+#resultadoLabel{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    position: absolute;
+    bottom: 4rem;
+}
+#criarBtn{
+    background-color: transparent;
+    font-family: 'Poppins'; 
+    font-size: 1em;
+    line-height: .2rem;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    border: 3px solid var(--clr-grad-3);
+    transition: all .2s ease-in-out;
+}
+#criarBtn:hover{
+    background-color: var(--clr-grad-3);
+    color: black;
+}
+.bottom-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.bottom-row a{
+    text-decoration: none;
+    color: var(--clr-font);
+    transition: all .2s ease-in-out;
+}
+.bottom-row a:hover{
+    color: var(--clr-grad-3);
+}
+.bottom-row input, label{
+    float: left;
+}
+
+article{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article img{
+    width: 25rem;
+    animation: img-animate 5s ease-in-out infinite;
+}
+article img:hover{
+    -webkit-filter: drop-shadow(5px 5px 5px var(--clr-grad-3));
+    filter: drop-shadow(5px 5px 5px var(--clr-grad-3));
+}
+@keyframes img-animate {
+    0%{transform: rotate(-5deg);}
+    50%{transform: rotate(-15deg);}
+    100%{transform: rotate(-5deg);}
+}

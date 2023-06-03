@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MysteryBOXES - Surprise Yourself</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="medias.css">
+</head>
+<body>
+    <header>
+        <div class="box name">MYSTERY<span>BOXES</span></div>
+        <div class="box icons">
+            <div class="icon">
+                <a href="#">
+                    <ion-icon name="home-outline" id="linkIcon"></ion-icon>
+                    <span>HOME</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <ion-icon name="cube-outline" id="linkIcon"></ion-icon>
+                    <span>CAIXAS</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <ion-icon name="people-outline" id="linkIcon"></ion-icon>
+                    <span onclick="exibirPopUp()">SOBRE NÓS</span>
+                </a>
+                <div id="popUp">
+                    <div id="popUpContent">
+                        <span  onclick="fecharPopUp()">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <h1>SOBRE NÓS</h1>
+                        <p>Somos uma empresa que vende caixas com produtos misteriosos.
+                            <br>
+                            Você escolhe o tema da caixa porém não sabe o conteúdo
+                            <br><br>
+                            <h1>HISTÓRIA </h1>
+                            Muitas vezes estamos presos a rotina diária da vida, fazendo diariamente
+                            nossos hábitos, costumes e obrigações.
+                            <br><br>
+                            E de certa forma estamos tornando a vida pacata e repetitiva ao longo dos anos. 
+                            <br>
+                            Mas não precisamos sempre saber toda a rotina o tempo
+                            todo, precisamos?
+                            <br>
+                            <br>
+                            Com essa preocupação em mente tivemos a ideia de criar o mistério e
+                            curiosidade novamente em nossas rotinas criando nosso site.
+                            <br><br>
+                            </p>
+                        <div class="contatos">
+                            <ion-icon name="logo-facebook" style="color: blue;"></ion-icon>
+                            <ion-icon name="logo-youtube" style="color: red;"></ion-icon>
+                            </ion-icon><ion-icon name="logo-instagram" style="color: palevioletred;"></ion-icon>
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="box account">
+            <a href="#" id="seuLinkId">Criar Conta</a>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <aside>
+                <h2>PERMITA SE</h2>
+                <h1>SURPREENDER</h1>
+                <form>
+                    <p>Crie uma conta e compre agora</p>
+                    <label>Email:</label>
+                    <input type="email" id="seuInputId">
+
+                    <label>Senha:</label>
+                    <input type="password" id="senhaInput">
+
+                    <label>Confirme a senha:</label>
+                    <input type="password" id="confirmarSenhaInput">
+
+                    <label id="resultadoLabel"></label>
+
+                    <input type="submit" value="CRIAR" id="criarBtn"  onclick="validarFormulario()">
+
+                    <div class="bottom-row">
+                        <div><input type="checkbox"><label>Remember me</label></div>
+                        <a href="#">Log in</a>
+                    </div>
+                </form>
+            </aside>
+            <article>
+                <img src="box (1).png" alt="caixa">
+            </article>
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<script src="index.js"></script>
+</html>
