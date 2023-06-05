@@ -8,9 +8,9 @@
 
 :root {
     --clr-bg: rgb(20, 20, 20);
-    --clr-grad-1: rgb(47, 30, 196);
-    --clr-grad-2: rgb(219, 37, 67);
-    --clr-grad-3: rgb(108, 23, 206);
+    --clr-grad-1: rgb(49, 34, 189);
+    --clr-grad-2: rgb(226, 18, 108);
+    --clr-grad-3: rgb(141, 90, 200);
     --clr-font: white;
     --background: linear-gradient(90deg, var(--clr-grad-1), var(--clr-grad-2), var(--clr-grad-3)) no-repeat;
     background-size: cover;
@@ -72,6 +72,10 @@ header {
     border-top-left-radius: .6rem;
 }
 
+.icons:has(#linkIcon) {
+    color: var(--clr-grad-3);
+}
+
 .icon a {
     display: flex;
     flex-direction: column;
@@ -83,7 +87,7 @@ header {
 }
 
 .icon a:hover {
-    color: var(--clr-grad-3);
+    color: currentColor;
 }
 
 .icon a #linkIcon {
@@ -92,7 +96,7 @@ header {
 
 .icon a:hover>#linkIcon {
     display: block;
-    animation: up .3s ease-in-out forwards;
+    animation: .3s;
 }
 
 @keyframes up {
@@ -198,8 +202,9 @@ header {
     border-radius: 50%;
 }
 
-#popUpContent p {
+#popUpContent:has(p) {
     font-size: 1em;
+    color: var(--clr-font);
 }
 
 .contatos {
@@ -208,8 +213,6 @@ header {
     flex-direction: row;
     justify-content: space-around;
 }
-
-
 
 /*HEADER*/
 
@@ -292,12 +295,11 @@ aside form input {
     color: white;
     margin-top: 3rem;
     border: 3px solid var(--clr-grad-3);
-    transition: all .2s ease-in-out;
+    transition: .3s;
 }
 
 #criarBtn:hover {
     background-color: var(--clr-grad-3);
-    color: black;
 }
 
 .bottom-row {
