@@ -39,4 +39,7 @@
     aside {
         max-height: 70dvh;
     }
+    #popUp{
+        font-size: .9em;
+    }
 }
