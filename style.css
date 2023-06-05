@@ -266,8 +266,8 @@ aside p {
 
 aside form {
     display: flex;
+    width: 20rem;
     flex-direction: column;
-    position: relative;
 }
 
 aside form input {
@@ -279,11 +279,10 @@ aside form input {
 }
 
 #resultadoLabel {
-    display: flex;
-    text-align: left;
-    align-items: center;
-    position: absolute;
-    bottom: 4rem;
+    display: grid;
+    place-content: center;
+    height: 1rem;
+    margin-top: 5px;
 }
 
 #criarBtn {
@@ -293,7 +292,7 @@ aside form input {
     line-height: .2rem;
     text-align: center;
     color: white;
-    margin-top: 3rem;
+    margin-top: 1rem;
     border: 3px solid var(--clr-grad-3);
     transition: .3s;
 }
@@ -335,6 +334,7 @@ article {
 article img {
     width: 25rem;
     animation: img-animate 5s ease-in-out infinite;
+    transition: .3s;
 }
 
 article img:hover {
