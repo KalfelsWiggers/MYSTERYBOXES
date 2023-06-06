@@ -5,8 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caixas -  Surprise Yourself</title>
+    <link rel="stylesheet" href="../css/ProductScreen.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
 </head>
 <body>
-    
+    <header>
+        <div class="box name" id="cards">
+            <div>MYSTERY<span>BOXES</span></div>
+            <div class="contatos">
+                <ion-icon name="logo-facebook" style="color: #6f95e6;"></ion-icon>
+                <ion-icon name="logo-youtube" style="color: #FF0000;"></ion-icon>
+                </ion-icon><ion-icon name="logo-instagram" style="color: #c077dc;"></ion-icon>
+            </div>
+        </div>
+        <div class="box icons" id="cards">
+            <div class="icon">
+                <a href="../index.html" target="_self">
+                    <ion-icon name="home-outline" id="linkIcon"></ion-icon>
+                    <span>HOME</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="./productScreen/product.html">
+                    <ion-icon name="cube-outline" id="linkIcon"></ion-icon>
+                    <span>CAIXAS</span>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <ion-icon name="people-outline" id="linkIcon"></ion-icon>
+                    <span onclick="exibirPopUp()">SOBRE NÓS</span>
+                </a>
+                <div id="popUp">
+                    <div id="popUpContent">
+                        <span  onclick="fecharPopUp()">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <h1>SOBRE NÓS</h1>
+                        <p>Somos uma empresa que vende caixas com produtos misteriosos.
+                            <br>
+                            Você escolhe o tema da caixa porém não sabe o conteúdo
+                            <br><br>
+                            <h1>HISTÓRIA </h1>
+                            Muitas vezes estamos presos a rotina diária da vida, fazendo diariamente
+                            nossos hábitos, costumes e obrigações.
+                            <br><br>
+                            E de certa forma estamos tornando a vida pacata e repetitiva ao longo dos anos. 
+                            <br>
+                            Mas não precisamos sempre saber toda a rotina o tempo
+                            todo, precisamos?
+                            <br>
+                            <br>
+                            Com essa preocupação em mente tivemos a ideia de criar o mistério e
+                            curiosidade novamente em nossas rotinas criando nosso site.
+                            <br><br>
+                            </p>
+                        <br>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="box account" id="cards">
+            <a href="#" id="seuLinkId">Criar Conta</a>
+        </div>
+    </header>
+    <main>
+        .cells+h1+p*8
+    </main>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+<script src="../js/index.js"></script>
 </html>
