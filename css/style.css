@@ -337,13 +337,13 @@ article {
     align-items: center;
 }
 
-article img {
+article a img {
     width: 25rem;
     animation: img-animate 5s ease-in-out infinite;
     transition: .3s;
 }
 
-article img:hover {
+article a img:hover {
     -webkit-filter: drop-shadow(5px 5px 5px var(--clr-grad-3));
     filter: drop-shadow(5px 5px 5px var(--clr-grad-3));
 }

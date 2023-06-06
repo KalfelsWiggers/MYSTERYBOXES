@@ -39,7 +39,7 @@ function validarFormulario() {
 function exibirPopUp() {
   var popUp = document.getElementById('popUp');
   popUp.style.display = 'block';
-  popUp.style.animation = 'popFade .3s ease-in-out forwards';
+  popUp.style.animation = 'popFade .3s forwards';
 }
 function fecharPopUp() {
   var popUp = document.getElementById('popUp');
