@@ -33,7 +33,7 @@ function validarFormulario() {
   }
 
   // Todas as validações passaram, exibe mensagem de sucesso
-  resultadoLabel.innerText = "Tudo certo!";
+  resultadoLabel.innerText = "";
 }
 
 function exibirPopUp() {

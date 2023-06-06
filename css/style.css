@@ -93,7 +93,7 @@ header {
     transition: color .2s ease-in-out;
 }
 
-.icon a:hover {
+.icon a:hover, .icon a:focus {
     color: currentColor;
 }
 
@@ -101,7 +101,7 @@ header {
     display: none;
 }
 
-.icon a:hover>#linkIcon {
+.icon a:hover>#linkIcon, .icon a:focus>#linkIcon {
     display: block;
     animation: up .3s;
 }
