@@ -103,7 +103,7 @@ header {
 
 .icon a:hover>#linkIcon {
     display: block;
-    animation: .3s;
+    animation: up .3s;
 }
 
 @keyframes up {
@@ -146,6 +146,7 @@ header {
     display: none;
     z-index: 1;
     animation: none;
+    font-size: 1em;
 }
 
 @keyframes popFade {
