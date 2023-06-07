@@ -14,9 +14,10 @@
 
 @media screen and (max-width: 712px) {
     html, body{
-        width: 115vw;
-        min-height: 125vh;
-        overflow: hidden;
+        min-width: 100%;
+    }
+    body{
+        margin: 0;
     }
     header {
         grid-template-columns: none;

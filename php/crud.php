@@ -9,6 +9,6 @@
     {
         $comando = $pdo->prepare("INSERT INTO usuario VALUE('', '$email_usuario','$senha_usuario', '$senhaconfirmada_usuario')");
         $resultado = $comando->execute();
-        header("Location: ./index.html");
+        header("Location: ../index.html");
     }
 ?>
