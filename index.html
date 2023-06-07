@@ -76,20 +76,20 @@
             <aside>
                 <h2>PERMITA SE</h2>
                 <h1>SURPREENDER</h1>
-                <form>
+                <form method="post" action="./php/crud.php">
                     <p>Crie uma conta e compre agora</p>
                     <label>Email:</label>
-                    <input type="email" id="seuInputId">
+                    <input type="email" id="seuInputId" name="email">
 
                     <label>Senha:</label>
-                    <input type="password" id="senhaInput">
+                    <input type="password" id="senhaInput" name="senha">
 
                     <label>Confirme a senha:</label>
-                    <input type="password" id="confirmarSenhaInput">
+                    <input type="password" id="confirmarSenhaInput" name="senhaconfirmada">
 
                     <label id="resultadoLabel"></label>
 
-                    <input type="submit" value="CRIAR" id="criarBtn"  onclick="validarFormulario()">
+                    <input type="submit" value="CRIAR" id="criarBtn" name="gravar" onclick="validarFormulario()">
 
                     <div class="bottom-row">
                         <div>
