@@ -8,13 +8,13 @@
 
 :root {
     --clr-bg: rgb(20, 20, 20);
-    --clr-grad-1: rgb(69, 53, 207);
-    --clr-grad-2: rgb(226, 18, 108);
-    --clr-grad-3: rgb(141, 90, 200);
+    --clr-grad-1: hsl(246, 57%, 50%);
+    --clr-grad-2: hsl(330, 57%, 50%);
+    --clr-grad-3: hsl(300, 57%, 50%);
     --clr-font: white;
     --bg-chat: rgb(14, 168, 14);
     --bg-chat-hover: rgb(63, 185, 63);
-    --background: linear-gradient(90deg, var(--clr-grad-1), var(--clr-grad-2), var(--clr-grad-3)) no-repeat;
+    --background: linear-gradient(90deg, var(--clr-grad-1) 15%, var(--clr-grad-3) 85%, var(--clr-grad-1)) no-repeat;
     background-size: cover;
 }
 
@@ -22,6 +22,11 @@ html,
 body {
     min-height: 100%;
 }
+
+.hidden {
+    display: none;
+}
+
 
 body {
     background: var(--background);
@@ -248,6 +253,7 @@ aside {
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
+    position: relative;
 }
 
 aside h2 {
@@ -274,6 +280,12 @@ aside form {
     width: 20rem;
     flex-direction: column;
 }
+.merda{
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+    position: relative;
+}
 
 aside form input {
     height: 1.5rem;
@@ -292,15 +304,23 @@ aside form input {
 }
 
 #criarBtn {
+    position: absolute;
+    width: 20rem;
+    height: 20px;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     font-family: 'Poppins';
     font-size: 1em;
+    padding: .65rem;
+    border-radius: .2rem;
     line-height: .2rem;
     text-align: center;
     color: white;
-    margin-top: 1rem;
     border: 3px solid var(--clr-grad-3);
-    transition: .3s;
+    transition: background-color .3s ease;
 }
 
 #criarBtn:hover {
@@ -312,7 +332,7 @@ aside form input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .bottom-row a {

@@ -13,9 +13,10 @@ function validarFormulario() {
   var senha = document.getElementById("senhaInput").value;
   var confirmarSenha = document.getElementById("confirmarSenhaInput").value;
   var resultadoLabel = document.getElementById("resultadoLabel");
+  
 
   // Verifica se o email contém "@" e ".com"
-  if (!email.includes("@") || !email.includes(".com")) {
+  if (!email.includes("@") || !email.includes(".com")){
     resultadoLabel.innerText = "O email não é válido!";
     return;
   }
@@ -110,3 +111,34 @@ function toggleScreen()
     }
 }
 
+
+// Obtém a referência para o link e a div
+var link = document.getElementById("link");
+var divConteudo = document.getElementById("criarBtn");
+var input = document.getElementById("confirmarSenhaInput");
+var label = document.getElementById("label");
+
+var conteudoOriginal = divConteudo.textContent; // Salva o conteúdo original da div
+var conteudoOriginal2 = link.textContent;
+
+// Adiciona um ouvinte de evento para o clique no link
+link.addEventListener("click", function(event) {
+  // Impede o comportamento padrão do link (redirecionar para outra página)
+  event.preventDefault();
+
+  // Verifica se o conteúdo atual é o conteúdo original
+
+  if (divConteudo.textContent === conteudoOriginal) {
+    // Altera o conteúdo da div para um novo texto
+    divConteudo.textContent = "CRIAR";
+    link.textContent = "Entrar";
+    label.classList.remove("hidden"); // Exibe o input
+    input.classList.remove("hidden"); // Exibe o input
+  } else {
+    // Caso contrário, restaura o conteúdo original
+    divConteudo.textContent = conteudoOriginal;
+    link.textContent = conteudoOriginal2;
+    label.classList.add("hidden"); // Oculta o input
+    input.classList.add("hidden"); // Oculta o input
+  }
+});

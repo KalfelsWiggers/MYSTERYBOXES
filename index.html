@@ -76,29 +76,30 @@
             <aside>
                 <h2>PERMITA SE</h2>
                 <h1>SURPREENDER</h1>
-                <form method="post" action="./php/crud.php">
-                    <p>Crie uma conta e compre agora</p>
-                    <label>Email:</label>
-                    <input type="email" id="seuInputId" name="email">
+                <div class="merda">
+                    <form>
+                        <p>Crie uma conta e compre agora</p>
+                        <label>Email:</label>
+                        <input type="email" id="seuInputId">
 
-                    <label>Senha:</label>
-                    <input type="password" id="senhaInput" name="senha">
+                        <label>Senha:</label>
+                        <input type="password" id="senhaInput">
 
-                    <label>Confirme a senha:</label>
-                    <input type="password" id="confirmarSenhaInput" name="senhaconfirmada">
+                        <label id="label" class="hidden">Confirme a senha:</label>
+                        <input type="password" id="confirmarSenhaInput" class="hidden">
 
-                    <label id="resultadoLabel"></label>
+                        <label id="resultadoLabel"></label>
 
-                    <input type="submit" value="CRIAR" id="criarBtn" name="gravar" onmouseover="validarFormulario()">
-
-                    <div class="bottom-row">
-                        <div>
-                            <input type="checkbox">
-                            <label>Lembre de mim</label>
+                        <div class="bottom-row">
+                            <div>
+                                <input type="checkbox">
+                                <label>Lembre de mim</label>
+                            </div>
+                            <a href="#" id="link" onclick="swap();">Criar</a>
                         </div>
-                        <a href="#">Entrar</a>
-                    </div>
-                </form>
+                    </form>
+                    <button id="criarBtn" onmouseover="validarFormulario()">ENTRAR</button>
+                </div>
             </aside>
             <article>
                 <a href="./productScreen/product.html"><img src="./img's/box (1).png" alt="caixa"></a>
